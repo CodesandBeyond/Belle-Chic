@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Accessories</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-bar">
+                <div class="search-bar">
+                </div>
+                <div class="top-right">
+                    <a href="#" class="login-text" id="loginButton">Login</a>
+                    <div class="icons">
+                        <a href="#" id="notificationButton"><i class="fas fa-bell"></i></a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="store-name-link">
+                <div class="store-name">Belle Chic</div>
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="dropdown-content">
+                            <li><a href="Tops.html">Tops</a></li>
+                            <li><a href="Bottoms.html">Bottoms</a></li>
+                            <li><a href="Dresses.html">Dresses</a></li>
+                            <li><a href="Accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeButton">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Keep me logged in for 7 days</label>
+                        </div>
+                        <button type="submit" id="loginSubmit">Login</button>
+                    </form>
+                    <button id="googleSignInButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Modal -->
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <span id="emailError" class="error-message"></span>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <span id="passwordError" class="error-message"></span>
+                        <!-- other form elements -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="googleSignUpButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+            </div>
+Earrings
+        </div>
+    </header>
+    <br>
+    <br>
+
+    <main>
+        <section class="featured-items">
+            <div class="s1-header">
+                <h1><span>BAGS</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/handle-bag.webp" alt="Item 1" class="main-image" id="handbag">
+                        <img src="img/Accessories/Bags/purse-side.webp" alt="Item 1 Hover" class="hover-image" id="handbag">
+                    </div>
+                    <h3>Handle Bag</h3>
+                    <p>$40.00</p>
+                    <button class="add-to-cart" data-name="Handle Bag" data-price="40.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/leather-hobo.webp" alt="Item 2" class="main-image">
+                        <img src="img/Accessories/Bags/leather-hobo-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Leather Hobo Bag</h3>
+                    <p>$189.63</p>
+                    <button class="add-to-cart" data-name="Leather Hobo Bag" data-price="189.63">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/leather-tote.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Bags/leather-tote-back.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Leather Tote Bag</h3>
+                    <p>$148.98</p>
+                    <button class="add-to-cart" data-name="Leather Tote Bag" data-price="148.98">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/croc-satchel.webp" alt="Item 4" class="main-image">
+                        <img src="img/Accessories/Bags/croc-satchel-back.webp" alt="Item 4 Hover" class="hover-image">
+                    </div>
+                    <h3>Croc Satchel Bag</h3>
+                    <p>$169.55</p>
+                    <button class="add-to-cart" data-name="Croc Satchel Bag" data-price="169.55">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/diamond-quilt-card.webp" alt="Item 5" class="main-image">
+                        <img src="img/Accessories/Bags/diamond-quilt-card-back.webp" alt="Item 5 Hover" class="hover-image">
+                    </div>
+                    <h3>Leather Diamond Quilted Wallet</h3>
+                    <p>$158.00</p>
+                    <button class="add-to-cart" data-name="Leather Diamond Quilted Wallet" data-price="158.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Bags/leather-shoulder.webp" alt="Item 6" class="main-image">
+                        <img src="img/Accessories/Bags/leather-shoulder-back.webp" alt="Item 6 Hover" class="hover-image">
+                    </div>
+                    <h3>Leather Shoulder Bag</h3>
+                    <p>$89.00</p>
+                    <button class="add-to-cart" data-name="Leather Shoulder Bag" data-price="89.00">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="featured-items">
+            <div class="s1-header">
+                <h1><span>EARRINGS</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/t-hoop-earrings.webp" alt="Item 1" class="main-image">
+                        <img src="img/Accessories/Earrings/t-hoop-earrings-flat.webp" alt="Item 1 Hover" class="hover-image">
+                    </div>
+                    <h3>T-Hoop Earrings</h3>
+                    <p>$92.30</p>
+                    <button class="add-to-cart" data-name="T-Hoop Earrings" data-price="92.30">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/freshwater-pearl-stud-earrings.webp" alt="Item 2" class="main-image">
+                        <img src="img/Accessories/Earrings/freshwater-pearl-stud-earrings-worn.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Pearl Stud Earrings</h3>
+                    <p>$36.50</p>
+                    <button class="add-to-cart" data-name="Pearl Stud Earrings" data-price="36.50">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/drop-earrings.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Earrings/drop-earrings-worn.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Teardrop Earrings</h3>
+                    <p>$38.25</p>
+                    <button class="add-to-cart" data-name="Teardrop Earrings" data-price="38.25">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/square-edge-hoop.webp" alt="Item 4" class="main-image">
+                        <img src="img/Accessories/Earrings/square-edge-hoop-worn.webp" alt="Item 4 Hover" class="hover-image">
+                    </div>
+                    <h3>Square Edged Hoop Earrings</h3>
+                    <p>$30.00</p>
+                    <button class="add-to-cart" data-name="Square Edged Hoop Earrings" data-price="30.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/hugge-hoops.webp" alt="Item 5" class="main-image">
+                        <img src="img/Accessories/Earrings/huggie-hoops-worn.webp" alt="Item 5 Hover" class="hover-image">
+                    </div>
+                    <h3>Huggie Hoop Earrings</h3>
+                    <p>$65.00</p>
+                    <button class="add-to-cart" data-name="Huggie Hoop Earrings" data-price="65.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Earrings/rotating-stud.webp" alt="Item 6" class="main-image">
+                        <img src="img/Accessories/Earrings/rotating-stud-worn.webp" alt="Item 6 Hover" class="hover-image">
+                    </div>
+                    <h3>Rotating Stud Earrings</h3>
+                    <p>$52.00</p>
+                    <button class="add-to-cart" data-name="Rotating Stud Earrings" data-price="52.00">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-items">
+            <div class="s1-header">
+                <h1><span>NECKLACES</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/purse-pendant-necklace.webp" alt="Item 1" class="main-image">
+                        <img src="img/Accessories/Necklaces/purse-pendant-necklace-worn.webp" alt="Item 1 Hover" class="hover-image">
+                    </div>
+                    <h3>Purse Pendant Necklace</h3>
+                    <p>$135.68</p>
+                    <button class="add-to-cart" data-name="Purse Pendant Necklace" data-price="135.68">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/pebble-necklace.webp" alt="Item 2" class="main-image">
+                        <img src="img/Accessories/Necklaces/pebble-necklace-worn.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Pebble Necklace</h3>
+                    <p>$56.86</p>
+                    <button class="add-to-cart" data-name="Pebble Necklace" data-price="56.86">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/pearl-pendant-necklace.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Necklaces/pearl-pendant-necklace-worn.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Pearl Pendant Necklace</h3>
+                    <p>$67.98</p>
+                    <button class="add-to-cart" data-name="Pearl Pendant Necklace" data-price="67.98">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/snake-chain-necklace.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Necklaces/snake-chain-necklace-worn.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Snake Chain Necklace</h3>
+                    <p>$98.98</p>
+                    <button class="add-to-cart" data-name="Snake Chain Necklace" data-price="98.98">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/love-knot-necklace.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Necklaces/love-knot-necklace-worn.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Love Knot Necklace</h3>
+                    <p>$86.55</p>
+                    <button class="add-to-cart" data-name="Love Knot Necklace" data-price="86.55">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Accessories/Necklaces/long-pendant-necklace.webp" alt="Item 3" class="main-image">
+                        <img src="img/Accessories/Necklaces/long-pendant-necklace-worn.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Long Pendant Necklace</h3>
+                    <p>$101.92</p>
+                    <button class="add-to-cart" data-name="Long Pendant Necklace" data-price="101.92">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+
+</html>

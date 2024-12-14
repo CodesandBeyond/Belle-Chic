@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-bar">
+                <div class="search-bar">
+                </div>
+                <div class="top-right">
+                    <a href="#" class="login-text" id="loginButton">Login</a>
+                    <div class="icons">
+                        <a href="#" id="notificationButton"><i class="fas fa-bell"></i></a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="store-name-link">
+                <div class="store-name">Belle Chic</div>
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="dropdown-content">
+                            <li><a href="Tops.html">Tops</a></li>
+                            <li><a href="Bottoms.html">Bottoms</a></li>
+                            <li><a href="Dresses.html">Dresses</a></li>
+                            <li><a href="Accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeButton">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Keep me logged in for 7 days</label>
+                        </div>
+                        <button type="submit" id="loginSubmit">Login</button>
+                    </form>
+                    <button id="googleSignInButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Modal -->
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <span id="emailError" class="error-message"></span>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <span id="passwordError" class="error-message"></span>
+                        <!-- other form elements -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="googleSignUpButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <br>
+    <br>
+
+    <main class="about-us-container">
+        <div class="about-content">
+            <h1 class="s1-header"><span>About Belle Chic</span></h1>
+            <p>Belle Chic is a curated fashion boutique dedicated to bringing you the latest trends in women's apparel. Our passion for style and quality drives us to provide a unique shopping experience for our customers.</p>
+            <p>Founded in 2020, we've quickly become a go-to destination for fashion-forward individuals who appreciate elegant and contemporary designs. Our collection ranges from chic everyday wear to stunning occasion pieces.</p>
+            <p>At Belle Chic, we believe that fashion is a form of self-expression. We're committed to helping you find pieces that not only look great but also make you feel confident and beautiful.</p>
+        </div>
+        <div class="about-slideshow-container">
+            <div class="about-slideshow">
+                <img src="img/Gallery Photos/model-red-dress.png" alt="Model 1" class="about-slide">
+                <img src="img/Gallery Photos/model-pink-flower.png" alt="Model 2" class="about-slide">
+                <img src="img/Gallery Photos/brown-white-model.png" alt="Model 3" class="about-slide">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>        
+    </main>
+
+    <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="social" role="navigation" aria-labelledby="social-heading">
+            <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Dribble"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#" aria-label="Upwork"><i class="fa-brands fa-square-upwork"></i></a>
+        </div>
+        <hr class="footer-break">
+        <p class="copyright">© 2024 CodesandBeyond. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-bar">
+                <div class="search-bar">
+                </div>
+                <div class="top-right">
+                    <a href="#" class="login-text" id="loginButton">Login</a>
+                    <div class="icons">
+                        <a href="#" id="notificationButton"><i class="fas fa-bell"></i></a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="store-name-link">
+                <div class="store-name">Belle Chic</div>
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="dropdown-content">
+                            <li><a href="Tops.html">Tops</a></li>
+                            <li><a href="Bottoms.html">Bottoms</a></li>
+                            <li><a href="Dresses.html">Dresses</a></li>
+                            <li><a href="Accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeButton">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Keep me logged in for 7 days</label>
+                        </div>
+                        <button type="submit" id="loginSubmit">Login</button>
+                    </form>
+                    <button id="googleSignInButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Modal -->
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <span id="emailError" class="error-message"></span>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <span id="passwordError" class="error-message"></span>
+                        <!-- other form elements -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="googleSignUpButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+<br>
+<br>
+
+    <main>
+        <div class="wrap cf">
+            <h1 class="projTitle">Shopping Cart</h1>
+            <div class="heading cf">
+              <h1>My Cart</h1>
+              <a href="index.html" class="continue">Continue Shopping</a>
+            </div>
+            
+            <div class="cart">
+              <div id="cartItems">
+                  <!-- Cart items will be dynamically inserted here -->
+              </div>
+          </div>
+
+            <div class="promoCode">
+                <label for="promo">Have A Promo Code?</label>
+                <input type="text" name="promo" placholder="Enter Code" required/>
+                <span id="promoError" class="error-message"></span>
+                <a href="#" class="btn" id="promoButton"></a>
+            </div>
+            
+            <div class="subtotal cf">
+              <ul>
+                <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+                
+                    <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+                
+                      <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
+                      <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+                <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
+              </ul>
+            </div>
+          </div>
+    </main>
+
+    <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+      <div class="social" role="navigation" aria-labelledby="social-heading">
+          <h3 id="social-heading" class="sr-only">Follow us on social media</h3>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Dribble"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="#" aria-label="Upwork"><i class="fa-brands fa-square-upwork"></i></a>
+      </div>
+      <hr class="footer-break">
+      <p class="copyright">© 2024 CodesandBeyond. All Rights Reserved.</p>
+  </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/cart-display.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
+</html>

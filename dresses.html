@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dresses</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-bar">
+                <div class="search-bar">
+                </div>
+                <div class="top-right">
+                    <a href="#" class="login-text" id="loginButton">Login</a>
+                    <div class="icons">
+                        <a href="#" id="notificationButton"><i class="fas fa-bell"></i></a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="store-name-link">
+                <div class="store-name">Belle Chic</div>
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="dropdown-content">
+                            <li><a href="Tops.html">Tops</a></li>
+                            <li><a href="Bottoms.html">Bottoms</a></li>
+                            <li><a href="Dresses.html">Dresses</a></li>
+                            <li><a href="Accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeButton">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Keep me logged in for 7 days</label>
+                        </div>
+                        <button type="submit" id="loginSubmit">Login</button>
+                    </form>
+                    <button id="googleSignInButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Modal -->
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <span id="emailError" class="error-message"></span>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <span id="passwordError" class="error-message"></span>
+                        <!-- other form elements -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="googleSignUpButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <br>
+    <br>
+
+    <main>
+        <div class="s1-header">  
+            <h1><span>DRESSES</span></h1>
+        </div>
+        <section class="featured-items, dresses">
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/cocktail-dress-front.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/cocktail-dress-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Cocktail Dress</h3>
+                    <p>$114.62</p>
+                    <button class="add-to-cart" data-name="Cocktail Dress" data-price="114.62">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/pleated-aline-dress.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/pleated-aline-dress-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Pleated A-Line Dress</h3>
+                    <p>$99.00</p>
+                    <button class="add-to-cart" data-name="Pleated A-Line Dress" data-price="99.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/Ruched-Dress.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/Ruched-Dress-Back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Ruched Dress</h3>
+                    <p>$99.00</p>
+                    <button class="add-to-cart" data-name="Ruched Dress" data-price="99.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/marceline-swing-dress.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/marceline-swing-dress-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Marceline Swing Dress</h3>
+                    <p>$132.00</p>
+                    <button class="add-to-cart" data-name="Marceline Swing Dress" data-price="132.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/off-shoulder-dress.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/off-shoulder-dress-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Off Shoulder Dress</h3>
+                    <p>$109.35</p>
+                    <button class="add-to-cart" data-name="Off Shoulder Dress" data-price="109.35">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Dresses/embroidered-long-sleeve-gown.webp" alt="Item 2" class="main-image">
+                        <img src="img/Dresses/embroidered-long-sleeve-gown-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Embroidered Long Sleeve Gown</h3>
+                    <p>$186.26</p>
+                    <button class="add-to-cart" data-name="Embroidered Long Sleeve Gown" data-price="186.26">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Bottoms</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-bar">
+                <div class="search-bar">
+                </div>
+                <div class="top-right">
+                    <a href="#" class="login-text" id="loginButton">Login</a>
+                    <div class="icons">
+                        <a href="#" id="notificationButton"><i class="fas fa-bell"></i></a>
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="store-name-link">
+                <div class="store-name">Belle Chic</div>
+            </a>
+            <nav>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Shop</a>
+                        <ul class="dropdown-content">
+                            <li><a href="Tops.html">Tops</a></li>
+                            <li><a href="Bottoms.html">Bottoms</a></li>
+                            <li><a href="Dresses.html">Dresses</a></li>
+                            <li><a href="Accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeButton">&times;</span>
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Keep me logged in for 7 days</label>
+                        </div>
+                        <button type="submit" id="loginSubmit">Login</button>
+                    </form>
+                    <button id="googleSignInButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Modal -->
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form id="signupForm">
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                        <span id="emailError" class="error-message"></span>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                        <span id="passwordError" class="error-message"></span>
+                        <!-- other form elements -->
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="googleSignUpButton" class="google-sign-in-button">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <br>
+    <br>
+
+    <main>
+        <section class="featured-items">
+            <div class="s1-header">  
+                <h1><span>PANTS</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/classic-trousers.webp" alt="Item 1" class="main-image">
+                        <img src="img/Bottoms/Pants/classic-trousers-back.webp" alt="Item 1 Hover" class="hover-image">
+                    </div>
+                    <h3>Classic Trousers</h3>
+                    <p>$89.00</p>
+                    <button class="add-to-cart" data-name="Classic Trousers" data-price="89.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/fleece-joggers.webp" alt="Item 2" class="main-image">
+                        <img src="img/Bottoms/Pants/fleece-joggers-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Fleece Joggers</h3>
+                    <p>$26.46</p>
+                    <button class="add-to-cart" data-name="Fleece Joggers" data-price="26.46">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/straight-jeans.webp" alt="Item 3" class="main-image">
+                        <img src="img/Bottoms/Pants/straight-jeans-back.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Straight Jeans</h3>
+                    <p>$139.00</p>
+                    <button class="add-to-cart" data-name="Straight Jeans" data-price="139.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/wide-leg.webp" alt="Item 4" class="main-image">
+                        <img src="img/Bottoms/Pants/wide-leg-back.webp" alt="Item 4 Hover" class="hover-image">
+                    </div>
+                    <h3>Wide Leg Pants</h3>
+                    <p>$148.00</p>
+                    <button class="add-to-cart" data-name="Wide Leg Pants" data-price="148.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/straight-leg.webp" alt="Item 5" class="main-image">
+                        <img src="img/Bottoms/Pants/straight-leg-back.webp" alt="Item 5 Hover" class="hover-image">
+                    </div>
+                    <h3>Straight Leg Pants</h3>
+                    <p>$89.00</p>
+                    <button class="add-to-cart" data-name="Straight Leg Pants" data-price="89.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Pants/wide-jean.webp" alt="Item 6" class="main-image">
+                        <img src="img/Bottoms/Pants/wide-jean-back.webp" alt="Item 6 Hover" class="hover-image">
+                    </div>
+                    <h3>Wide Jeans</h3>
+                    <p>$83.97</p>
+                    <button class="add-to-cart" data-name="Wide Jeans" data-price="83.97">Add to Cart</button>
+                </div>
+        </section>
+
+        <section class="featured-items">
+            <div class="s1-header">  
+                <h1><span>SHORTS</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/aeroswift.webp" alt="Item 1" class="main-image">
+                        <img src="img/Bottoms/Shorts/aeroswift-back.webp" alt="Item 1 Hover" class="hover-image">
+                    </div>
+                    <h3>Aeroswift Running Shorts</h3>
+                    <p>$80.00</p>
+                    <button class="add-to-cart" data-name="Aeroswift Running Shorts" data-price="80.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/cutoff.webp" alt="Item 2" class="main-image">
+                        <img src="img/Bottoms/Shorts/cutoff-back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Denim Cutoffs</h3>
+                    <p>$69.50</p>
+                    <button class="add-to-cart" data-name="Denim Cutoffs" data-price="69.50">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/daisy-denim.webp" alt="Item 3" class="main-image">
+                        <img src="img/Bottoms/Shorts/daisy-denim-back.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Daisy Denim Shorts</h3>
+                    <p>$50.00</p>
+                    <button class="add-to-cart" data-name="Daisy Denim Shorts" data-price="50.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/gingham-cotton.webp" alt="Item 4" class="main-image">
+                        <img src="img/Bottoms/Shorts/daisy-denim-back.webp" alt="Item 4 Hover" class="hover-image">
+                    </div>
+                    <h3>Cotton Gingham Shorts</h3>
+                    <p>$123.25</p>
+                    <button class="add-to-cart" data-name="Cotton Gingham Shorts" data-price="123.25">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/hw-shorts.webp" alt="Item 5" class="main-image">
+                        <img src="img/Bottoms/Shorts/hw-shorts-back.webp" alt="Item 5 Hover" class="hover-image">
+                    </div>
+                    <h3>High Waist Tailored Shorts</h3>
+                    <p>$70.00</p>
+                    <button class="add-to-cart" data-name="High Waist Tailored Shorts" data-price="70.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Shorts/micro-denim.webp" alt="Item 6" class="main-image">
+                        <img src="img/Bottoms/Shorts/micro-denim-back.webp" alt="Item 6 Hover" class="hover-image">
+                    </div>
+                    <h3>Micro Denim Shorts</h3>
+                    <p>$59.20</p>
+                    <button class="add-to-cart" data-name="Micro Denim Shorts" data-price="59.20">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-items">
+            <div class="s1-header">  
+                <h1><span>SKIRTS</span></h1>
+            </div>
+            <div class="item-grid">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/skirts/plus-leather-skirt.webp" alt="Item 1" class="main-image">
+                        <img src="img/Bottoms/skirts/plus-leather-skirt-back.webp" alt="Item 1 Hover" class="hover-image">
+                    </div>
+                    <h3>Leather Maxi Skirt</h3>
+                    <p>$67.98</p>
+                    <button class="add-to-cart" data-name="Leather Maxi Skirt" data-price="67.98">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Skirts/Denim-Midi.webp" alt="Item 2" class="main-image">
+                        <img src="img/Bottoms/Skirts/Denim-Midi-Back.webp" alt="Item 2 Hover" class="hover-image">
+                    </div>
+                    <h3>Denim Midi Skirt</h3>
+                    <p>$89.50</p>
+                    <button class="add-to-cart" data-name="Denim Midi Skirt" data-price="89.50">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Skirts/Floral-Maxi.webp" alt="Item 3" class="main-image">
+                        <img src="img/Bottoms/Skirts/Floral-Maxi-Back.webp" alt="Item 3 Hover" class="hover-image">
+                    </div>
+                    <h3>Floral Maxi Skirt</h3>
+                    <p>$59.63</p>
+                    <button class="add-to-cart" data-name="Floral Maxi Skirt" data-price="59.63">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Skirts/Mesh-Midi.webp" alt="Item 4" class="main-image">
+                        <img src="img/Bottoms/Skirts/Mesh-Midi-Back.webp" alt="Item 4 Hover" class="hover-image">
+                    </div>
+                    <h3>Mesh Midi Skirt</h3>
+                    <p>$55.00</p>
+                    <button class="add-to-cart" data-name="Mesh Midi Skirt" data-price="55.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Skirts/Midi-Skirt.webp" alt="Item 5" class="main-image">
+                        <img src="img/Bottoms/Skirts/Midi-Skirt-Back.webp" alt="Item 5 Hover" class="hover-image">
+                    </div>
+                    <h3>Cotton Midi Skirt</h3>
+                    <p>$89.00</p>
+                    <button class="add-to-cart" data-name="Cotton Midi Skirt" data-price="89.00">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="img/Bottoms/Skirts/Pleated-Mini.webp" alt="Item 6" class="main-image">
+                        <img src="img/Bottoms/Skirts/Pleated-Mini-Back.webp" alt="Item 6 Hover" class="hover-image">
+                    </div>
+                    <h3>Pleated Mini Skirt</h3>
+                    <p>$46.00</p>
+                    <button class="add-to-cart" data-name="Pleated Mini Skirt" data-price="46.00">Add to Cart</button>
+                </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+
+</html>
